@@ -7,8 +7,6 @@ export type CourseContent = {
   objectives: string[];
   whatYouWillLearn: string[];
   curriculum: { unit: string; lessons: string[] }[];
-  schedule: { days: string[]; time: string };
-  duration: string;
   teachingMethod: string;
   notes?: string;
   whatsappMessage: string;
@@ -20,149 +18,151 @@ export type Course = {
   en: CourseContent;
 };
 
-/**
- * Mock course data. Replace with the instructor's real course details later.
- * Nothing in the UI components is hardcoded to a specific course — add or
- * edit entries here and the site (cards, details page, WhatsApp messages)
- * updates automatically.
- */
 export const courses: Course[] = [
   {
-    id: 'grade-10-math',
+    id: 'first-secondary-programming-ai',
     ar: {
-      title: 'كورس الرياضيات - أولى ثانوي',
-      grade: 'أولى ثانوي',
-      subject: 'الرياضيات',
-      shortDescription:
-        'شرح شامل لمنهج أولى ثانوي بطريقة مبسطة ومنظمة مع تدريبات ومراجعات دورية.',
-      description:
-        'كورس متكامل يغطي منهج الرياضيات لطلاب أولى ثانوي، يعتمد على الشرح المبسط والتطبيق العملي على أنماط الأسئلة المختلفة، مع متابعة مستمرة لمستوى كل طالب لضمان الفهم الكامل قبل الانتقال إلى أي جزء جديد.',
+      title: 'بكالوريا الصف الأول الثانوي — البرمجة والذكاء الاصطناعي',
+      grade: 'بكالوريا الصف الأول الثانوي',
+      subject: 'البرمجة والذكاء الاصطناعي',
+      shortDescription: 'مسار دراسي لفهم البرمجة والذكاء الاصطناعي بصورة عملية ومنظمة، مع التركيز على بناء أساس قوي للتعلم والتطبيق.',
+      description: 'كورس مخصص لطلاب الصف الأول الثانوي في مادة البرمجة والذكاء الاصطناعي، مع شرح مبسط للمفاهيم البرمجية والتفكير الحاسوبي وربطها بتطبيقات الذكاء الاصطناعي. تم تنظيم صفحة الكورس بما يتوافق مع وجود مادة البرمجة والذكاء الاصطناعي ضمن إطار الصف الأول الثانوي في النظام الدراسي الحالي.',
       objectives: [
-        'إتقان أساسيات المنهج بشكل كامل',
-        'تنمية مهارة حل المسائل والتفكير الرياضي',
-        'الاستعداد الجيد للامتحانات الشهرية والفصلية',
+        'بناء أساس قوي في التفكير الحاسوبي والبرمجة',
+        'فهم المفاهيم الأساسية للذكاء الاصطناعي وتطبيقاته',
+        'التدرب على تحويل المشكلات إلى خطوات وحلول قابلة للتنفيذ',
       ],
       whatYouWillLearn: [
-        'حل المعادلات والمتباينات بأنواعها',
-        'أساسيات الهندسة التحليلية',
-        'التعامل مع الدوال ورسمها',
+        'أساسيات البرمجة وكتابة الحلول بطريقة منظمة',
+        'الخوارزميات والتفكير المنطقي وحل المشكلات',
+        'مقدمة عملية إلى مفاهيم الذكاء الاصطناعي',
+        'التعامل مع أمثلة وتطبيقات برمجية مرتبطة بالمادة',
       ],
       curriculum: [
         {
-          unit: 'الوحدة الأولى: الجبر',
-          lessons: ['المعادلات من الدرجة الأولى', 'المعادلات من الدرجة الثانية', 'المتباينات'],
+          unit: 'أساسيات البرمجة',
+          lessons: ['مفاهيم البرمجة الأساسية', 'المتغيرات والبيانات', 'الشروط والتكرار', 'كتابة حلول منظمة'],
         },
         {
-          unit: 'الوحدة الثانية: الهندسة',
-          lessons: ['الإحداثيات والمستقيم', 'الدائرة', 'تطبيقات هندسية'],
+          unit: 'الخوارزميات وحل المشكلات',
+          lessons: ['التفكير الحاسوبي', 'تصميم خطوات الحل', 'الخوارزميات وتقييم الحلول', 'تطبيقات عملية'],
+        },
+        {
+          unit: 'مقدمة في الذكاء الاصطناعي',
+          lessons: ['ما هو الذكاء الاصطناعي؟', 'أمثلة على تطبيقاته', 'التعامل مع البيانات كمقدمة للتطبيقات الذكية', 'أخلاقيات واستخدامات الذكاء الاصطناعي'],
         },
       ],
-      schedule: { days: ['السبت', 'الإثنين', 'الأربعاء'], time: '6:00 مساءً' },
-      duration: '12 أسبوع',
-      teachingMethod:
-        'حصص أونلاين مباشرة مع تسجيل الحصة، بالإضافة إلى مجموعة واجبات وتدريبات أسبوعية.',
-      notes: 'يتم توفير ملازم الكورس بصيغة PDF لكل طالب مسجل.',
-      whatsappMessage: 'السلام عليكم، أريد التقديم في كورس أولى ثانوي.',
+      teachingMethod: 'شرح مبسط مع تطبيق عملي وتدريبات تدريجية تساعد الطالب على فهم الفكرة ثم تنفيذها بنفسه.',
+      notes: 'المواعيد والتفاصيل الخاصة بالحجز يتم تأكيدها مباشرة عبر واتساب.',
+      whatsappMessage: 'السلام عليكم، أريد الاستفسار عن كورس بكالوريا الصف الأول الثانوي في البرمجة والذكاء الاصطناعي.',
     },
     en: {
-      title: 'Math Course - Grade 10',
-      grade: 'Grade 10',
-      subject: 'Mathematics',
-      shortDescription:
-        'A complete walkthrough of the Grade 10 curriculum with clear explanations, practice sets, and regular reviews.',
-      description:
-        "A complete course covering the Grade 10 math curriculum, built on clear explanations and hands-on practice with different question styles, with ongoing follow-up on each student's level to make sure every topic is fully understood before moving on.",
+      title: 'First Secondary Baccalaureate — Programming & Artificial Intelligence',
+      grade: 'First Secondary',
+      subject: 'Programming & Artificial Intelligence',
+      shortDescription: 'A structured learning path for programming and AI, focused on building a practical foundation for learning and application.',
+      description: 'A course for First Secondary students studying Programming and Artificial Intelligence, with clear explanations of programming concepts and computational thinking connected to practical AI applications. The course page reflects the current First Secondary framework in which Programming and AI is included as a subject.',
       objectives: [
-        'Fully master the fundamentals of the curriculum',
-        'Build strong problem-solving and mathematical reasoning skills',
-        'Prepare well for monthly and term exams',
+        'Build a strong foundation in computational thinking and programming',
+        'Understand core artificial intelligence concepts and applications',
+        'Practice turning problems into structured, executable solutions',
       ],
       whatYouWillLearn: [
-        'Solving equations and inequalities of different types',
-        'Fundamentals of analytic geometry',
-        'Working with functions and graphing them',
+        'Programming fundamentals and structured solutions',
+        'Algorithms, logical thinking, and problem solving',
+        'A practical introduction to artificial intelligence',
+        'Examples and programming applications related to the subject',
       ],
       curriculum: [
         {
-          unit: 'Unit 1: Algebra',
-          lessons: ['First-degree equations', 'Second-degree equations', 'Inequalities'],
+          unit: 'Programming Fundamentals',
+          lessons: ['Core programming concepts', 'Variables and data', 'Conditions and loops', 'Writing structured solutions'],
         },
         {
-          unit: 'Unit 2: Geometry',
-          lessons: ['Coordinates and the straight line', 'The circle', 'Geometric applications'],
+          unit: 'Algorithms & Problem Solving',
+          lessons: ['Computational thinking', 'Designing solution steps', 'Algorithms and evaluating solutions', 'Practical applications'],
+        },
+        {
+          unit: 'Introduction to Artificial Intelligence',
+          lessons: ['What is AI?', 'Examples of AI applications', 'Working with data as a foundation for intelligent applications', 'AI ethics and responsible use'],
         },
       ],
-      schedule: { days: ['Saturday', 'Monday', 'Wednesday'], time: '6:00 PM' },
-      duration: '12 weeks',
-      teachingMethod:
-        'Live online sessions with recordings provided, plus weekly homework and practice sets.',
-      notes: 'Course notes are provided as a PDF to every enrolled student.',
-      whatsappMessage: 'Hello, I would like to apply for the Grade 10 math course.',
+      teachingMethod: 'Clear explanations followed by practical work and progressive exercises so students understand the idea and then implement it themselves.',
+      notes: 'Current class dates and booking details are confirmed directly through WhatsApp.',
+      whatsappMessage: 'Hello, I would like to ask about the First Secondary Programming & Artificial Intelligence course.',
     },
   },
   {
-    id: 'grade-11-math',
+    id: 'second-secondary-programming-ai',
     ar: {
-      title: 'كورس الرياضيات - تانية ثانوي',
-      grade: 'تانية ثانوي',
-      subject: 'الرياضيات',
-      shortDescription:
-        'برنامج منظم لفهم منهج تانية ثانوي والتدرب على أنماط الأسئلة المختلفة.',
-      description:
-        'كورس مخصص لطلاب تانية ثانوي يركز على بناء أساس قوي في الجبر وحساب المثلثات، مع تدريبات مكثفة على الأسئلة التي تتكرر في الامتحانات، ومتابعة دورية لتقييم مستوى الطالب.',
+      title: 'بكالوريا الصف الثاني الثانوي — البرمجة والذكاء الاصطناعي',
+      grade: 'بكالوريا الصف الثاني الثانوي',
+      subject: 'البرمجة والذكاء الاصطناعي',
+      shortDescription: 'مسار متقدم للطلاب الراغبين في استكمال بناء مهاراتهم في البرمجة والذكاء الاصطناعي مع تطبيقات عملية.',
+      description: 'مسار تدريبي لطلاب الصف الثاني الثانوي يركز على استكمال مهارات البرمجة والتفكير الخوارزمي والتعرف بصورة أعمق على تطبيقات الذكاء الاصطناعي. تفاصيل الجدول والمحتوى النهائي للحصص يتم تأكيدها مع المدرّسة حسب الخطة الدراسية الفعلية.',
       objectives: [
-        'فهم عميق لموضوعات حساب المثلثات والجبر',
-        'القدرة على حل المسائل المركبة خطوة بخطوة',
-        'رفع مستوى الثقة قبل دخول الامتحانات',
+        'تطوير مهارات البرمجة وحل المشكلات',
+        'الانتقال من فهم المفاهيم إلى بناء تطبيقات أبسط',
+        'توسيع الفهم العملي لمفاهيم الذكاء الاصطناعي',
       ],
-      whatYouWillLearn: ['العلاقات والدوال المثلثية', 'المتتابعات والمتسلسلات', 'التفاضل التمهيدي'],
+      whatYouWillLearn: [
+        'كتابة برامج أكثر تنظيمًا وقابلية للتطوير',
+        'حل المشكلات باستخدام الخوارزميات',
+        'فهم أعمق لفكرة البيانات والنماذج الذكية',
+        'تطبيق المفاهيم من خلال تمارين ومشروعات صغيرة',
+      ],
       curriculum: [
         {
-          unit: 'الوحدة الأولى: حساب المثلثات',
-          lessons: ['القياس الدائري', 'الدوال المثلثية', 'حل المثلثات'],
+          unit: 'تطوير مهارات البرمجة',
+          lessons: ['تنظيم البرامج', 'الدوال وإعادة استخدام الكود', 'التعامل مع هياكل البيانات الأساسية', 'تطبيقات عملية'],
         },
         {
-          unit: 'الوحدة الثانية: الجبر',
-          lessons: ['المتتابعات', 'المتسلسلات', 'تطبيقات عامة'],
+          unit: 'الخوارزميات والتطبيق العملي',
+          lessons: ['تحليل المشكلة', 'اختيار الخوارزمية المناسبة', 'اختبار الحل وتحسينه', 'مشروعات تدريبية صغيرة'],
+        },
+        {
+          unit: 'تطبيقات الذكاء الاصطناعي',
+          lessons: ['مراجعة مفاهيم AI الأساسية', 'البيانات والنماذج', 'أمثلة على تطبيقات AI', 'مشروعات تطبيقية مبسطة'],
         },
       ],
-      schedule: { days: ['الأحد', 'الثلاثاء', 'الخميس'], time: '7:00 مساءً' },
-      duration: '12 أسبوع',
-      teachingMethod:
-        'حصص أونلاين مباشرة مع تسجيل الحصة، بالإضافة إلى مجموعة واجبات وتدريبات أسبوعية.',
-      notes: 'مراجعات نهائية مكثفة قبل كل امتحان.',
-      whatsappMessage: 'السلام عليكم، أريد التقديم في كورس تانية ثانوي.',
+      teachingMethod: 'شرح عملي قائم على حل المشكلات والتطبيق، مع تدريبات ومشروعات صغيرة لتثبيت المفاهيم.',
+      notes: 'هذه الصفحة تعرض المسار التدريبي للصف الثاني؛ يتم تأكيد المواد والمواعيد النهائية مع المدرّسة قبل الحجز.',
+      whatsappMessage: 'السلام عليكم، أريد الاستفسار عن مسار بكالوريا الصف الثاني الثانوي في البرمجة والذكاء الاصطناعي.',
     },
     en: {
-      title: 'Math Course - Grade 11',
-      grade: 'Grade 11',
-      subject: 'Mathematics',
-      shortDescription:
-        'A structured program to master the Grade 11 curriculum and practice different question styles.',
-      description:
-        "A dedicated course for Grade 11 students focused on building a strong foundation in algebra and trigonometry, with intensive practice on frequently recurring exam questions and regular check-ins on each student's progress.",
+      title: 'Second Secondary Baccalaureate — Programming & Artificial Intelligence',
+      grade: 'Second Secondary',
+      subject: 'Programming & Artificial Intelligence',
+      shortDescription: 'An advanced learning path for students who want to continue developing programming and AI skills through practical work.',
+      description: 'A training path for Second Secondary students focused on strengthening programming and algorithmic thinking while exploring AI applications in greater depth. The final lesson plan and schedule are confirmed with the instructor according to the actual study plan.',
       objectives: [
-        'Deep understanding of trigonometry and algebra topics',
-        'Ability to solve compound problems step by step',
-        'Build confidence ahead of exams',
+        'Strengthen programming and problem-solving skills',
+        'Move from understanding concepts to building simple applications',
+        'Develop a deeper practical understanding of AI concepts',
       ],
-      whatYouWillLearn: ['Trigonometric relations and functions', 'Sequences and series', 'Introductory calculus'],
+      whatYouWillLearn: [
+        'Writing more structured and maintainable programs',
+        'Problem solving with algorithms',
+        'A deeper view of data and intelligent models',
+        'Applying concepts through exercises and small projects',
+      ],
       curriculum: [
         {
-          unit: 'Unit 1: Trigonometry',
-          lessons: ['Radian measure', 'Trigonometric functions', 'Solving triangles'],
+          unit: 'Programming Skills Development',
+          lessons: ['Program organization', 'Functions and code reuse', 'Working with basic data structures', 'Practical applications'],
         },
         {
-          unit: 'Unit 2: Algebra',
-          lessons: ['Sequences', 'Series', 'General applications'],
+          unit: 'Algorithms & Practical Application',
+          lessons: ['Problem analysis', 'Choosing suitable algorithms', 'Testing and improving solutions', 'Small training projects'],
+        },
+        {
+          unit: 'AI Applications',
+          lessons: ['Review of core AI concepts', 'Data and models', 'Examples of AI applications', 'Simple applied projects'],
         },
       ],
-      schedule: { days: ['Sunday', 'Tuesday', 'Thursday'], time: '7:00 PM' },
-      duration: '12 weeks',
-      teachingMethod:
-        'Live online sessions with recordings provided, plus weekly homework and practice sets.',
-      notes: 'Intensive final review sessions before every exam.',
-      whatsappMessage: 'Hello, I would like to apply for the Grade 11 math course.',
+      teachingMethod: 'Practical, problem-based teaching with exercises and small projects to reinforce the concepts.',
+      notes: 'This page presents the Second Secondary training path; the final content and schedule are confirmed with the instructor before booking.',
+      whatsappMessage: 'Hello, I would like to ask about the Second Secondary Programming & Artificial Intelligence learning path.',
     },
   },
 ];

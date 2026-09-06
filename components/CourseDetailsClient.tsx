@@ -8,7 +8,6 @@ import { getWhatsAppLink } from '@/lib/whatsapp';
 export default function CourseDetailsClient({ course }: { course: Course }) {
   const { locale, dir, t } = useLanguage();
   const content = course[locale];
-  const scheduleDays = content.schedule.days.join(locale === 'ar' ? '، ' : ', ');
   const backArrow = dir === 'rtl' ? '→' : '←';
 
   return (
@@ -27,32 +26,22 @@ export default function CourseDetailsClient({ course }: { course: Course }) {
           <dd className="meta-value">{content.grade}</dd>
         </div>
         <div className="meta-item">
-          <dt className="meta-label">{t.courses.duration}</dt>
-          <dd className="meta-value">{content.duration}</dd>
-        </div>
-        <div className="meta-item">
-          <dt className="meta-label">{t.courses.schedule}</dt>
-          <dd className="meta-value">
-            {scheduleDays} · {content.schedule.time}
-          </dd>
+          <dt className="meta-label">{t.courses.subject}</dt>
+          <dd className="meta-value">{content.subject}</dd>
         </div>
       </dl>
 
       <section className="details-section" aria-labelledby="objectives-heading">
         <h2 id="objectives-heading">{t.details.objectives}</h2>
         <ul>
-          {content.objectives.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+          {content.objectives.map((item) => <li key={item}>{item}</li>)}
         </ul>
       </section>
 
       <section className="details-section" aria-labelledby="learn-heading">
         <h2 id="learn-heading">{t.details.whatYouWillLearn}</h2>
         <ul>
-          {content.whatYouWillLearn.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
+          {content.whatYouWillLearn.map((item) => <li key={item}>{item}</li>)}
         </ul>
       </section>
 
@@ -62,9 +51,7 @@ export default function CourseDetailsClient({ course }: { course: Course }) {
           <div key={unit.unit} className="curriculum-unit">
             <h3>{unit.unit}</h3>
             <ul>
-              {unit.lessons.map((lesson) => (
-                <li key={lesson}>{lesson}</li>
-              ))}
+              {unit.lessons.map((lesson) => <li key={lesson}>{lesson}</li>)}
             </ul>
           </div>
         ))}
