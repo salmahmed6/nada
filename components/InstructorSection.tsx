@@ -11,11 +11,6 @@ export default function InstructorSection() {
   return (
     <section className="instructor-section" aria-labelledby="instructor-name">
       <div className="instructor-card">
-        {/*
-          Placeholder avatar until a real photo is provided.
-          Swap this div for an <Image src="/instructor.jpg" alt={info.name} .../>
-          from next/image when the photo is available.
-        */}
         <div className="instructor-photo" role="img" aria-label={info.name}>
           {info.initials}
         </div>
