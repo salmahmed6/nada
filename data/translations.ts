@@ -9,8 +9,7 @@ export type Dictionary = {
     viewDetails: string;
     applyNow: string;
     grade: string;
-    duration: string;
-    schedule: string;
+    subject: string;
   };
   details: {
     back: string;
@@ -28,12 +27,10 @@ export type Dictionary = {
 
 export const translations: Record<Locale, Dictionary> = {
   ar: {
-    nav: {
-      switchTo: 'English',
-    },
+    nav: { switchTo: 'English' },
     hero: {
-      title: 'طريقك للتفوق يبدأ من هنا',
-      subtitle: 'شرح مبسط، متابعة مستمرة، وخطة تعليمية تساعدك على تحقيق أفضل نتيجة.',
+      title: 'البرمجة والذكاء الاصطناعي تبدأ بخطوة صحيحة',
+      subtitle: 'شرح مبسط وتطبيق عملي لطلاب المرحلة الثانوية، مع مسارات مخصصة للصفين الأول والثاني الثانوي.',
       cta: 'استعرض الكورسات',
     },
     instructor: {
@@ -43,10 +40,9 @@ export const translations: Record<Locale, Dictionary> = {
     courses: {
       sectionTitle: 'الكورسات المتاحة',
       viewDetails: 'عرض تفاصيل الكورس',
-      applyNow: 'احجز الآن',
+      applyNow: 'استفسر الآن',
       grade: 'الصف الدراسي',
-      duration: 'مدة الكورس',
-      schedule: 'مواعيد الحصص',
+      subject: 'المادة',
     },
     details: {
       back: 'العودة إلى الكورسات',
@@ -55,7 +51,7 @@ export const translations: Record<Locale, Dictionary> = {
       curriculum: 'محتوى الكورس',
       teachingMethod: 'طريقة الشرح',
       notes: 'ملاحظات إضافية',
-      applyNow: 'احجز الآن عبر واتساب',
+      applyNow: 'استفسر عبر واتساب',
       notFoundTitle: 'الكورس غير موجود',
       notFoundBody: 'عذرًا، لا يمكن العثور على تفاصيل هذا الكورس.',
     },
@@ -65,13 +61,10 @@ export const translations: Record<Locale, Dictionary> = {
     },
   },
   en: {
-    nav: {
-      switchTo: 'العربية',
-    },
+    nav: { switchTo: 'العربية' },
     hero: {
-      title: 'Your path to excelling in math starts here',
-      subtitle:
-        'Clear explanations, steady follow-up, and a study plan built to get you the results you want.',
+      title: 'Start Your Programming & AI Journey the Right Way',
+      subtitle: 'Clear explanations and practical learning for secondary students, with dedicated paths for First and Second Secondary.',
       cta: 'Browse Courses',
     },
     instructor: {
@@ -81,10 +74,9 @@ export const translations: Record<Locale, Dictionary> = {
     courses: {
       sectionTitle: 'Available Courses',
       viewDetails: 'View Course Details',
-      applyNow: 'Apply Now',
+      applyNow: 'Ask About the Course',
       grade: 'Grade',
-      duration: 'Duration',
-      schedule: 'Class Schedule',
+      subject: 'Subject',
     },
     details: {
       back: 'Back to Courses',
@@ -93,7 +85,7 @@ export const translations: Record<Locale, Dictionary> = {
       curriculum: 'Course Curriculum',
       teachingMethod: 'Teaching Method',
       notes: 'Additional Notes',
-      applyNow: 'Apply Now via WhatsApp',
+      applyNow: 'Ask via WhatsApp',
       notFoundTitle: 'Course Not Found',
       notFoundBody: "Sorry, we couldn't find details for this course.",
     },
