@@ -3,23 +3,41 @@ export type InstructorContent = {
   role: string;
   bio: string;
   initials: string;
+  education: string;
+  graduation: string;
+  highlights: string[];
+  skills: string[];
 };
 
-/**
- * Replace bio copy and add a real photo (see components/InstructorSection.tsx)
- * once the instructor provides them. No claims or stats are invented here.
- */
 export const instructor: Record<'ar' | 'en', InstructorContent> = {
   ar: {
-    name: 'أ. سارة أحمد',
-    role: 'مدرّسة رياضيات',
-    bio: 'مدرّسة رياضيات متخصصة في المرحلة الثانوية، تعتمد على أسلوب شرح مبسط ومتابعة فردية لكل طالب لضمان الفهم الكامل للمنهج.',
-    initials: 'س.أ',
+    name: 'ندى أحمد',
+    role: 'مهندسة ذكاء اصطناعي | AI Engineer',
+    bio: 'مهندسة ذكاء اصطناعي حاصلة على بكالوريوس الذكاء الاصطناعي بتخصص الروبوتات، ولديها أساس قوي في البرمجة والذكاء الاصطناعي وتطبيقاتهما العملية.',
+    initials: 'ن.أ',
+    education: 'بكالوريوس الذكاء الاصطناعي – تخصص الروبوتات، الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري',
+    graduation: 'تخرجت في يوليو 2024 – GPA: 3',
+    highlights: [
+      'دورة Java Development من ITI',
+      'دورة AWS Cloud Infrastructure',
+      'المشاركة في مسابقة ECPC عامي 2022 و2023',
+      'المشاركة في RoboCup Junior عام 2022',
+    ],
+    skills: ['Python', 'Java', 'C++', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'],
   },
   en: {
-    name: 'Ms. Nada Ahmed',
-    role: 'Math Teacher',
-    bio: 'A high school math teacher who focuses on clear, simplified explanations and individual follow-up with every student to make sure the curriculum is fully understood.',
-    initials: 'SA',
+    name: 'Nada Ahmed',
+    role: 'AI Engineer',
+    bio: 'AI Engineer with a Bachelor’s degree in Artificial Intelligence, Robotics major, with a strong foundation in programming, artificial intelligence, and practical AI applications.',
+    initials: 'NA',
+    education: 'B.Sc. in Artificial Intelligence, Robotics Major – Arab Academy for Science, Technology and Maritime Transport',
+    graduation: 'Graduated July 2024 – GPA: 3',
+    highlights: [
+      'Java Development Course – ITI',
+      'AWS Cloud Infrastructure Course',
+      'ECPC Competition participant in 2022 and 2023',
+      'RoboCup Junior Competition participant in 2022',
+    ],
+    skills: ['Python', 'Java', 'C++', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'],
   },
 };
