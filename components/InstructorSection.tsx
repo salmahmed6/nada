@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { instructor } from '@/data/instructor';
 import { getWhatsAppLink } from '@/lib/whatsapp';
@@ -11,8 +12,14 @@ export default function InstructorSection() {
   return (
     <section className="instructor-section" aria-labelledby="instructor-name">
       <div className="instructor-card">
-        <div className="instructor-photo" role="img" aria-label={info.name}>
-          {info.initials}
+        <div className="instructor-photo">
+          <Image
+            src="/instructor.svg"
+            alt={info.name}
+            width={104}
+            height={104}
+            className="instructor-photo-image"
+          />
         </div>
         <div className="instructor-info">
           <h2 id="instructor-name" className="instructor-name">{info.name}</h2>
