@@ -15,11 +15,14 @@ export default function InstructorSection() {
           {info.initials}
         </div>
         <div className="instructor-info">
-          <h2 id="instructor-name" className="instructor-name">
-            {info.name}
-          </h2>
+          <h2 id="instructor-name" className="instructor-name">{info.name}</h2>
           <p className="instructor-role">{info.role}</p>
           <p className="instructor-desc">{info.bio}</p>
+          <p className="instructor-education">{info.education}</p>
+          <p className="instructor-graduation">{info.graduation}</p>
+          <div className="instructor-skills" aria-label={locale === 'ar' ? 'المهارات' : 'Skills'}>
+            {info.skills.map((skill) => <span key={skill}>{skill}</span>)}
+          </div>
           <a
             href={getWhatsAppLink(t.instructor.inquiryMessage)}
             target="_blank"
