@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 const siteUrl = 'https://Nada-ahmed-courses.vercel.app';
-const title = 'أ. سارة أحمد | كورسات الرياضيات لطلاب الثانوية';
+const title = 'ندى أحمد عطيه | كورسات البرمجة والذكاء الاصطناعي لطلاب الثانوية';
 const description =
-  'كورسات رياضيات لطلاب أولى وتانية ثانوي مع أ. سارة أحمد. شرح مبسط، متابعة مستمرة، وحجز مباشر عبر واتساب.';
+  'كورسات البرمجة والذكاء الاصطناعي لطلاب الصفين الأول والثاني الثانوي مع ندى أحمد عطيه، مهندسة ذكاء اصطناعي. شرح مبسط، تطبيق عملي، واستفسار مباشر عبر واتساب.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   alternates: {
     languages: {
       ar: '/',
+      en: '/',
     },
   },
 };
