@@ -17,7 +17,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-const siteUrl = 'https://sarah-ahmed-courses.vercel.app';
+const siteUrl = 'https://Nada-ahmed-courses.vercel.app';
 const title = 'أ. سارة أحمد | كورسات الرياضيات لطلاب الثانوية';
 const description =
   'كورسات رياضيات لطلاب أولى وتانية ثانوي مع أ. سارة أحمد. شرح مبسط، متابعة مستمرة، وحجز مباشر عبر واتساب.';

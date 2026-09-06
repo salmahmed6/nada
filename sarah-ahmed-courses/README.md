@@ -1,4 +1,4 @@
-# Sarah Ahmed — Math Courses Landing Page
+# Nada Ahmed — Math Courses Landing Page
 
 A bilingual (Arabic/English) course landing page built with Next.js. Public
 facing, no login, no database — students/parents browse courses and reach out

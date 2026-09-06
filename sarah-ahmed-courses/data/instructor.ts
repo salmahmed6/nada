@@ -17,7 +17,7 @@ export const instructor: Record<'ar' | 'en', InstructorContent> = {
     initials: 'س.أ',
   },
   en: {
-    name: 'Ms. Sarah Ahmed',
+    name: 'Ms. Nada Ahmed',
     role: 'Math Teacher',
     bio: 'A high school math teacher who focuses on clear, simplified explanations and individual follow-up with every student to make sure the curriculum is fully understood.',
     initials: 'SA',
